@@ -1,0 +1,27 @@
+{
+	"questionSet": {
+		"id": 2,
+		"title": "Advanced JavaScript Concepts",
+		"type": "flashcard",
+		"questionCount": 10,
+		"highestScore": 50,
+		"createdAt": "2024-08-20T14:45:00Z"
+	},
+	"questions": [
+		{
+			"question": "What is the primary keyword used in Java to denote inheritance??",
+			"answer": "The keyword used for inheritance in Java is `extends`. This keyword allows one class (the subclass) to inherit properties and methods from another class (the superclass). For example, `class B extends A` indicates that class B is inheriting from class A, allowing it to access A's methods and properties unless they are marked private.",
+			"tips_and_tricks": "Remember that `extends` is used for class inheritance, while `implements` is used for interfaces. When dealing with inheritance questions, focus on class relationships and visibility of members."
+		},
+		{
+			"question": "In the context of Java inheritance, explain the difference in access to private members of a superclass from a subclass.",
+			"answer": "In Java, a class member declared as private is not accessible by subclasses. This means that even if a subclass extends a superclass, it cannot directly access the private members of the superclass. For example, if class M has a private member 'j', the subclass N cannot access 'j' directly even though N extends M.",
+			"tips_and_tricks": "When faced with inheritance scenarios, always pay attention to access modifiers (public, protected, private) to determine what is accessible in subclasses."
+		},
+		{
+			"question": "Explain the concept of dynamic method dispatch in Java with an example.",
+			"answer": "Dynamic method dispatch is a mechanism by which a call to an overridden method is resolved at runtime rather than compile-time. In Java, this is achieved through method overriding and polymorphism. For example, if a superclass type reference is used to call a method of a subclass that overrides a method of the superclass, the version of the method that corresponds to the object type rather than the reference type will be executed. This allows for a more dynamic behavior in the application. In the example provided, if class P has a method 'call' and classes Q and R override it, creating a reference of type P that points to R would call R's implementation of 'call' when invoked, even though the reference type is P.",
+			"tips_and_tricks": "To understand dynamic method dispatch, visualize the object type versus the reference type. Familiarize yourself with examples that show this behavior to solidify your understanding."
+		}
+	]
+}

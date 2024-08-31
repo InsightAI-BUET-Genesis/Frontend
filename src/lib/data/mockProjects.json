@@ -1,0 +1,99 @@
+{
+	"projects": [
+		{
+			"id": "1f7e5d2e-3d1c-4f72-96c7-0e77a9e60e01",
+			"name": "Project Alpha",
+			"description": "A project to develop a new AI model.",
+			"tasks": [
+				{
+					"id": 1,
+					"name": "Research",
+					"deadline": "2024-09-01T14:00:00",
+					"status": "Completed",
+					"description": "Research on AI algorithms."
+				},
+				{
+					"id": 2,
+					"name": "Development",
+					"deadline": "2024-10-15T17:30:00",
+					"status": "Pending",
+					"description": "Developing the AI model."
+				},
+				{
+					"id": 3,
+					"name": "Testing",
+					"deadline": "2024-11-10T09:00:00",
+					"status": "Pending",
+					"description": "Testing the model with various datasets."
+				},
+				{
+					"id": 4,
+					"name": "Deploying",
+					"deadline": "2024-11-12T13:00:00",
+					"status": "Pending",
+					"description": "Deploying the model to production environment."
+				}
+			],
+			"tags": ["AI", "Machine Learning", "Innovation"],
+			"user_id": "user123"
+		},
+		{
+			"id": "3e2d1f0c-6e22-4f63-8bd1-a572e5b7d9e4",
+			"name": "Project Beta",
+			"description": "A project focused on UI/UX design.",
+			"image_url": "https://example.com/images/beta.png",
+			"tasks": [
+				{
+					"name": "Wireframing",
+					"deadline": "2024-08-20",
+					"status": "Completed",
+					"description": "Creating wireframes for the application."
+				},
+				{
+					"name": "Prototyping",
+					"deadline": "2024-09-15",
+					"status": "In Progress",
+					"description": "Developing interactive prototypes."
+				},
+				{
+					"name": "User Testing",
+					"deadline": "2024-10-01",
+					"status": "Pending",
+					"description": "Conducting user testing sessions."
+				}
+			],
+			"tags": ["UI/UX", "Design", "User Experience"],
+			"theme": "#FFFFFF",
+			"user_id": "user456"
+		},
+		{
+			"id": "7c2a5f8b-4b22-4a9f-86b8-e7d72b9f38df",
+			"name": "Project Gamma",
+			"description": "A project to develop a mobile app.",
+			"image_url": "https://example.com/images/gamma.png",
+			"tasks": [
+				{
+					"name": "Requirements Gathering",
+					"deadline": "2024-08-30",
+					"status": "Completed",
+					"description": "Collecting requirements from stakeholders."
+				},
+				{
+					"name": "App Development",
+					"deadline": "2024-11-30",
+					"status": "In Progress",
+					"description": "Developing the mobile application."
+				},
+				{
+					"name": "Deployment",
+					"deadline": "2024-12-15",
+					"status": "Pending",
+					"description": "Deploying the app to the app stores."
+				}
+			],
+			"tags": ["Mobile", "App Development", "iOS", "Android"],
+			"theme": "#FFFFFF",
+			"user_id": "user789"
+		}
+	]
+}

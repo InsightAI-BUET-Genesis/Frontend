@@ -1,0 +1,1 @@
+ALTER TABLE "dummy_table" ADD COLUMN "age" integer NOT NULL;

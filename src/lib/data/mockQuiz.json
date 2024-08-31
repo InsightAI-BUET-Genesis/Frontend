@@ -1,0 +1,92 @@
+{
+	"questionSet": {
+		"id": 1,
+		"title": "Basic Programming Concepts",
+		"type": "mcq",
+		"questionCount": 10,
+		"highestScore": 5,
+		"createdAt": "2024-08-15T10:30:00Z"
+	},
+	"questions": [
+		{
+			"id": 1,
+			"question": "What does HTML stand for?",
+			"options": [
+				"Hyper Text Markup Language",
+				"High Tech Modern Language",
+				"Hyperlink and Text Markup Language",
+				"Home Tool Markup Language"
+			],
+			"correctAnswer": 0,
+			"explanation": "HTML stands for Hyper Text Markup Language. It is the standard language used to create web pages and web applications."
+		},
+		{
+			"id": 2,
+			"question": "Which of the following is not a programming language?",
+			"options": ["Python", "Java", "HTML", "C++"],
+			"correctAnswer": 2,
+			"explanation": "HTML is not a programming language; it is a markup language used to structure content on the web. Python, Java, and C++ are programming languages."
+		},
+		{
+			"id": 3,
+			"question": "What is the purpose of CSS in web development?",
+			"options": [
+				"To create interactive elements",
+				"To style the appearance of web pages",
+				"To handle server-side logic",
+				"To manage databases"
+			],
+			"correctAnswer": 1,
+			"explanation": "CSS (Cascading Style Sheets) is used to style the appearance of web pages, including layout, colors, fonts, and more."
+		},
+		{
+			"id": 4,
+			"question": "Which of the following is a JavaScript framework?",
+			"options": ["React", "Laravel", "Django", "Ruby on Rails"],
+			"correctAnswer": 0,
+			"explanation": "React is a popular JavaScript library for building user interfaces, particularly for single-page applications. Laravel, Django, and Ruby on Rails are frameworks for other languages."
+		},
+		{
+			"id": 5,
+			"question": "What is the output of 2 + '2' in JavaScript?",
+			"options": ["4", "22", "Error", "NaN"],
+			"correctAnswer": 1,
+			"explanation": "In JavaScript, when you add a number and a string, the number is converted to a string, and the two strings are concatenated, resulting in '22'."
+		},
+		{
+			"id": 6,
+			"question": "Which tag is used for the largest heading in HTML?",
+			"options": ["<h1>", "<h6>", "<header>", "<head>"],
+			"correctAnswer": 0,
+			"explanation": "The <h1> tag is used for the largest heading in HTML. The <h6> tag is used for the smallest heading."
+		},
+		{
+			"id": 7,
+			"question": "Which of the following is used to create a hyperlink in HTML?",
+			"options": ["<a>", "<link>", "<href>", "<hyper>"],
+			"correctAnswer": 0,
+			"explanation": "The <a> tag is used to define hyperlinks in HTML. The href attribute specifies the link’s destination."
+		},
+		{
+			"id": 8,
+			"question": "Which CSS property is used to change the background color?",
+			"options": ["color", "background-color", "bg-color", "background"],
+			"correctAnswer": 1,
+			"explanation": "The 'background-color' property in CSS is used to change the background color of an element."
+		},
+		{
+			"id": 9,
+			"question": "Which of the following is a server-side scripting language?",
+			"options": ["PHP", "JavaScript", "HTML", "CSS"],
+			"correctAnswer": 0,
+			"explanation": "PHP is a server-side scripting language used for web development. JavaScript can be used on both client-side and server-side, while HTML and CSS are used for structuring and styling web content."
+		},
+		{
+			"id": 10,
+			"question": "Which of the following is not an HTML element?",
+			"options": ["<div>", "<span>", "<head>", "<bodyy>"],
+			"correctAnswer": 3,
+			"explanation": "<bodyy> is not a valid HTML element. The correct element is <body>. <div>, <span>, and <head> are all valid HTML tags."
+		}
+	]
+}

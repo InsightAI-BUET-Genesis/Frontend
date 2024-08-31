@@ -1,0 +1,57 @@
+{
+    "questions": [
+      {
+        "question": "You are given a string that contains several words separated by spaces. Your task is to count how many words are present in the string using Java. How would you go about it?",
+        "answer": [
+          {
+            "step_name": "Splitting the String into Words",
+            "step_solution": "Use the 'split' method with a regular expression to divide the string into an array of words."
+          },
+          {
+            "step_name": "Counting the Words",
+            "step_solution": "Determine the length of the array created by the split method to count the words."
+          }
+        ],
+        "tips_and_tricks": "Remember to trim the string before splitting to avoid counting empty words, and ensure the delimiter used in the split method matches the one separating the words.",
+        "conclusion": "By using the split method from the String class, we can effectively separate a string into words and count them using the resulting array's length."
+      },
+      {
+        "question": "You are tasked to reverse a given string in Java without using any built-in reverse methods. How will you approach this?",
+        "answer": [
+          {
+            "step_name": "Create a StringBuffer or StringBuilder",
+            "step_solution": "Initialize a new StringBuffer or StringBuilder to hold the characters."
+          },
+          {
+            "step_name": "Iterate through the String in Reverse",
+            "step_solution": "Use a loop to iterate through the original string from the last character to the first and append each character to the StringBuffer/StringBuilder."
+          },
+          {
+            "step_name": "Convert to String",
+            "step_solution": "Convert the StringBuffer/StringBuilder back to a String."
+          }
+        ],
+        "tips_and_tricks": "Using StringBuilder or StringBuffer is more efficient because they allow modification of strings, unlike String which is immutable.",
+        "conclusion": "By creating a mutable StringBuffer or StringBuilder and appending characters in reverse order, we can construct the reversed string."
+      },
+      {
+        "question": "You have a string with mixed-case letters and some whitespace around it. Your goal is to convert the string to lowercase, trim the whitespace, and then check if the string starts with a specific substring. How would you implement this in Java?",
+        "answer": [
+          {
+            "step_name": "Trim the Whitespace",
+            "step_solution": "Use the trim() method on the string to remove leading and trailing whitespace."
+          },
+          {
+            "step_name": "Convert to Lowercase",
+            "step_solution": "Call the toLowerCase() method to convert the string to all lowercase characters."
+          },
+          {
+            "step_name": "Check the Initial Substring",
+            "step_solution": "Use the startsWith() method to check if the trimmed and lowercased string starts with the given substring."
+          }
+        ],
+        "tips_and_tricks": "Chain method calls to keep your code neat and concise, as Java's String methods return a new String rather than modifying the original.",
+        "conclusion": "By using trim(), toLowerCase(), and startsWith() in sequence, we can effectively prepare and validate the string with minimal code."
+      }
+    ]
+  }

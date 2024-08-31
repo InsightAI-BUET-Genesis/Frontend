@@ -1,0 +1,101 @@
+{
+  "id": "abe11a7d-9cd9-46fe-b5e9-6f31af77905d",
+  "prevId": "198a97bf-99e3-4264-80e3-1538f99cd944",
+  "version": "7",
+  "dialect": "postgresql",
+  "tables": {
+    "public.user_table": {
+      "name": "user_table",
+      "schema": "",
+      "columns": {
+        "user_id": {
+          "name": "user_id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "user_name": {
+          "name": "user_name",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "date_of_birth": {
+          "name": "date_of_birth",
+          "type": "date",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "profile_picture_url": {
+          "name": "profile_picture_url",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "default": "'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSLU5_eUUGBfxfxRd4IquPiEwLbt4E_6RYMw&s'"
+        },
+        "email": {
+          "name": "email",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "educational_institute": {
+          "name": "educational_institute",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "default": "'Not Provided'"
+        },
+        "current_academic_year": {
+          "name": "current_academic_year",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "default": "'Not Provided'"
+        },
+        "user_bio": {
+          "name": "user_bio",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "default": "'bio is empty'"
+        },
+        "academic_subject": {
+          "name": "academic_subject",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "default": "'Not Provided'"
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {
+        "user_table_user_id_unique": {
+          "name": "user_table_user_id_unique",
+          "nullsNotDistinct": false,
+          "columns": [
+            "user_id"
+          ]
+        },
+        "user_table_email_unique": {
+          "name": "user_table_email_unique",
+          "nullsNotDistinct": false,
+          "columns": [
+            "email"
+          ]
+        }
+      }
+    }
+  },
+  "enums": {},
+  "schemas": {},
+  "sequences": {},
+  "_meta": {
+    "columns": {},
+    "schemas": {},
+    "tables": {}
+  }
+}

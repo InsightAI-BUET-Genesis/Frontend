@@ -1,0 +1,16 @@
+[
+	{
+		"id": 1,
+		"title": "Basic Programming Concepts",
+		"type": "mcq",
+		"questionCount": 10,
+		"createdAt": "2024-08-15T10:30:00Z"
+	},
+	{
+		"id": 2,
+		"title": "Advanced JavaScript Concepts",
+		"type": "flashcard",
+		"questionCount": 10,
+		"createdAt": "2024-08-20T14:45:00Z"
+	}
+]

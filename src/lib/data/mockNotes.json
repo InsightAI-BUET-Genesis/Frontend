@@ -1,0 +1,278 @@
+[
+	{
+		"id": 1,
+		"title": "Java String",
+		"topic": "All",
+		"knowledgeLevel": "Medium",
+		"note": {
+			"introduction_and_motivation": "Strings are fundamental components of programming in Java, as they allow developers to handle textual data efficiently. Understanding how to use and manipulate strings is crucial for any Java programmer, whether for user input, data storage, or string processing. This note aims to delve into the various classes, methods, and functionalities associated with strings in Java, helping you become proficient in handling string operations.",
+			"slides": [
+				{
+					"slide_name": "String Basics",
+					"slide_content": "In Java, the String class is used to store and manipulate sequences of characters. A string can be created in two primary ways:\n1. Using the String constructor:\n   String message = new String(\"Welcome\");`\n2. Directly using string literals:\n   String message = \"Welcome\";\n\nStrings are immutable, meaning once created, they cannot be modified. If manipulation is needed, new strings are created."
+				},
+				{
+					"slide_name": "String Constructors",
+					"slide_content": "The String class offers various constructors to create string instances:\n- String s = new String(); // creates an empty string\n- String s2 = new String(s); // creates a string using another string s`\n- String s3 = new String(charArray);` // creates a string from a character array\n- You can also create strings from byte arrays that represent encoded characters. Examples include:\n```java\nchar charArray[] = { 'b', 'i', 'r', 't', 'h', ' ', 'd', 'a', 'y' };  \nString s3 = new String(charArray); // birth day\n```"
+				},
+				{
+					"slide_name": "String Length & Extraction",
+					"slide_content": "The length() method is used to find the length of a string:\n```java\nString s1 = \"Hello\";\nSystem.out.println(s1.length()); // Outputs: 5\n```\n\nYou can extract specific characters using the charAt(index) method:\n```java\nSystem.out.println(s1.charAt(1)); // Outputs: e\n```\n\nTo extract a range of characters, the getChars() method can be used to populate a character array with characters from the string."
+				},
+				{
+					"slide_name": "String Comparisons",
+					"slide_content": "Java provides several methods to compare strings:\n- equals() method returns true if the strings are equal:\n  ```java\n  s1.equals(\"Hello\"); // true\n  ```\n- equalsIgnoreCase() ignores case differences:\n  ```java\n  s1.equalsIgnoreCase(s2);\n  ```\n- compareTo() compares two strings lexicographically:\n  ```java\n  int result = s1.compareTo(s2);\n  ```\n\nPlease note that using == checks for reference equality instead, which may lead to unexpected results."
+				},
+				{
+					"slide_name": "String Manipulation Methods",
+					"slide_content": "Java strings provide various manipulation methods such as:\n- Concatenation using concat() or the + operator:\n  ```java\n  String s1 = \"Happy \";\n  String s2 = \"Birthday\";\n  String s3 = s1.concat(s2);\n  ```\n- Searching with indexOf(char) and lastIndexOf(char) methods to find positions of characters.\n- The split() method to divide a string based on a regex:\n  ```java\n  String test = \"abc,def,123\";\n  String[] out = test.split(\",\");\n  ```\n\nAdditionally, conversion methods like toUpperCase(), toLowerCase(), and trim() let you manipulate the content of strings effectively."
+				},
+				{
+					"slide_name": "StringBuffer and StringBuilder",
+					"slide_content": "Java provides the StringBuffer and StringBuilder classes for mutable sequences of characters:\n- *StringBuffer* is synchronized and thread-safe but slower.\n- *StringBuilder* is faster and not synchronized.\n\nBoth classes offer methods to append, insert, and modify strings:\n```java\nStringBuffer sb = new StringBuffer(\"hello\");\nsb.append(\" world\"); // hello world\nss.insert(5, ' '); // insert space\n```"
+				}
+			],
+			"questions": [
+				{
+					"question": "What is the difference between String and StringBuilder in Java?",
+					"answer": "The primary difference between String and StringBuilder in Java lies in mutability and performance. A String object is immutable, meaning that once it is created, it cannot be changed. Any modification to a String creates a new string object. In contrast, StringBuilder is mutable, allowing for modifications without creating new objects, which makes it more efficient for scenarios involving many concatenations or alterations. Additionally, StringBuilder is not synchronized, which means it is not thread-safe, whereas StringBuffer is synchronized and can be used in multi-threaded environments."
+				},
+				{
+					"question": "How can you extract a substring from a given string in Java?",
+					"answer": "In Java, you can extract a substring from a string using the substring() method. There are two variations of this method:\n1. substring(int startIndex): This copies characters from the start index to the end of the string.\n2. substring(int startIndex, int endIndex): This copies characters from the start index to one character before the end index. For example:\n```java\nString str = \"Hello World\";\nString subStr1 = str.substring(6); // Outputs \"World\"\nString subStr2 = str.substring(0, 5); // Outputs \"Hello\"\n```"
+				},
+				{
+					"question": "What does the method indexOf(char) do in a String?",
+					"answer": "The indexOf(char ch) method in a Java String returns the index of the first occurrence of the specified character within the string. If the character is not found, it returns -1. For example:\n```java\nString str = \"Hello\";\nint index = str.indexOf('e'); // Outputs: 1\nint notFoundIndex = str.indexOf('x'); // Outputs: -1\n``` This method is useful for searching specific characters within a string."
+				},
+				{
+					"question": "Explain how String.split(String regex) works in Java.",
+					"answer": "In Java, the split() method of the String class is used to divide a string into substrings based on a specified regular expression (regex). The method returns an array of strings that are split based on matches of the regex. For example:\n```java\nString fruits = \"apple,orange,banana\";\nString[] fruitArray = fruits.split(\",\");\n// fruitArray[0] = \"apple\"\n// fruitArray[1] = \"orange\"\n// fruitArray[2] = \"banana\"\n``` This is commonly used to parse delimited data."
+				},
+				{
+					"question": "Describe how to convert an integer to a String in Java.",
+					"answer": "Java offers several ways to convert an integer to a String. The primary methods include:\n1. Using Integer.toString(int):\n   ```java\n   int n = 123;\n   String s = Integer.toString(n);\n   ```\n2. Using String.valueOf(int):\n   ```java\n   String s = String.valueOf(n);\n   ```\n3. Concatenation with an empty string:\n   ```java\n   String s = n + \"\";\n   ```\nAll these methods effectively convert the integer to its string representation."
+				}
+			],
+			"conclusion": "In conclusion, understanding how to manipulate strings in Java is essential for effective programming. The String class offers several methods for creating, comparing, extracting, and modifying strings. Additionally, StringBuffer and StringBuilder provide enhanced features for mutable sequences of characters. For further exploration, consider learning about regex for string pattern matching and more advanced string manipulations in Java.",
+			"videos": [
+				{
+					"title": "Working With Strings - Java - Tutorial 7",
+					"link": "https://www.youtube.com/watch?v=yebwyol5M7k",
+					"imageUrl": "https://i.ytimg.com/vi/yebwyol5M7k/mqdefault.jpg?sqp=-oaymwEFCJQBEFM&rs=AMzJL3nzP7Bp76QSw5mSuYQqNmyeV2vPOQ",
+					"duration": "17:23",
+					"source": "YouTube",
+					"date": "Oct 22, 2017"
+				},
+				{
+					"title": "Java Tutorial - 07 - Creating and Using Strings in Java",
+					"link": "https://www.youtube.com/watch?v=r3DBIDyzLUI",
+					"imageUrl": "https://i.ytimg.com/vi/r3DBIDyzLUI/mqdefault.jpg?sqp=-oaymwEFCJQBEFM&rs=AMzJL3n5cEbfXMZeFXQt82qPGhG10tPgmw",
+					"duration": "11:39",
+					"source": "YouTube",
+					"date": "Feb 4, 2014"
+				},
+				{
+					"title": "#34 What is String in Java",
+					"link": "https://www.youtube.com/watch?v=cV-sOpOgof8",
+					"imageUrl": "https://i.ytimg.com/vi/cV-sOpOgof8/mqdefault.jpg?sqp=-oaymwEFCJQBEFM&rs=AMzJL3msCERp2ZOc2-XIVWB1BD054x8I-A",
+					"duration": "7:24",
+					"source": "YouTube",
+					"date": "Jan 18, 2023"
+				},
+				{
+					"title": "Java Strings Tutorial",
+					"link": "https://www.youtube.com/watch?v=yMkFYxrDL2M",
+					"imageUrl": "https://i.ytimg.com/vi/yMkFYxrDL2M/mqdefault.jpg?sqp=-oaymwEFCJQBEFM&rs=AMzJL3n9DjaxYF2WG9mb49MxVTrKsoLtsA",
+					"duration": "9:04",
+					"source": "YouTube",
+					"date": "Dec 5, 2020"
+				}
+			]
+		}
+	},
+	{
+		"id": 2,
+		"title": "Java String",
+		"topic": "All",
+		"knowledgeLevel": "Medium",
+		"note": {
+			"introduction_and_motivation": "Strings are fundamental components of programming in Java, as they allow developers to handle textual data efficiently. Understanding how to use and manipulate strings is crucial for any Java programmer, whether for user input, data storage, or string processing. This note aims to delve into the various classes, methods, and functionalities associated with strings in Java, helping you become proficient in handling string operations.",
+			"slides": [
+				{
+					"slide_name": "String Basics",
+					"slide_content": "In Java, the String class is used to store and manipulate sequences of characters. A string can be created in two primary ways:\n1. Using the String constructor:\n   String message = new String(\"Welcome\");`\n2. Directly using string literals:\n   String message = \"Welcome\";\n\nStrings are immutable, meaning once created, they cannot be modified. If manipulation is needed, new strings are created."
+				},
+				{
+					"slide_name": "String Constructors",
+					"slide_content": "The String class offers various constructors to create string instances:\n- String s = new String(); // creates an empty string\n- String s2 = new String(s); // creates a string using another string s`\n- String s3 = new String(charArray);` // creates a string from a character array\n- You can also create strings from byte arrays that represent encoded characters. Examples include:\n```java\nchar charArray[] = { 'b', 'i', 'r', 't', 'h', ' ', 'd', 'a', 'y' };  \nString s3 = new String(charArray); // birth day\n```"
+				},
+				{
+					"slide_name": "String Length & Extraction",
+					"slide_content": "The length() method is used to find the length of a string:\n```java\nString s1 = \"Hello\";\nSystem.out.println(s1.length()); // Outputs: 5\n```\n\nYou can extract specific characters using the charAt(index) method:\n```java\nSystem.out.println(s1.charAt(1)); // Outputs: e\n```\n\nTo extract a range of characters, the getChars() method can be used to populate a character array with characters from the string."
+				},
+				{
+					"slide_name": "String Comparisons",
+					"slide_content": "Java provides several methods to compare strings:\n- equals() method returns true if the strings are equal:\n  ```java\n  s1.equals(\"Hello\"); // true\n  ```\n- equalsIgnoreCase() ignores case differences:\n  ```java\n  s1.equalsIgnoreCase(s2);\n  ```\n- compareTo() compares two strings lexicographically:\n  ```java\n  int result = s1.compareTo(s2);\n  ```\n\nPlease note that using == checks for reference equality instead, which may lead to unexpected results."
+				},
+				{
+					"slide_name": "String Manipulation Methods",
+					"slide_content": "Java strings provide various manipulation methods such as:\n- Concatenation using concat() or the + operator:\n  ```java\n  String s1 = \"Happy \";\n  String s2 = \"Birthday\";\n  String s3 = s1.concat(s2);\n  ```\n- Searching with indexOf(char) and lastIndexOf(char) methods to find positions of characters.\n- The split() method to divide a string based on a regex:\n  ```java\n  String test = \"abc,def,123\";\n  String[] out = test.split(\",\");\n  ```\n\nAdditionally, conversion methods like toUpperCase(), toLowerCase(), and trim() let you manipulate the content of strings effectively."
+				},
+				{
+					"slide_name": "StringBuffer and StringBuilder",
+					"slide_content": "Java provides the StringBuffer and StringBuilder classes for mutable sequences of characters:\n- *StringBuffer* is synchronized and thread-safe but slower.\n- *StringBuilder* is faster and not synchronized.\n\nBoth classes offer methods to append, insert, and modify strings:\n```java\nStringBuffer sb = new StringBuffer(\"hello\");\nsb.append(\" world\"); // hello world\nss.insert(5, ' '); // insert space\n```"
+				}
+			],
+			"questions": [
+				{
+					"question": "What is the difference between String and StringBuilder in Java?",
+					"answer": "The primary difference between String and StringBuilder in Java lies in mutability and performance. A String object is immutable, meaning that once it is created, it cannot be changed. Any modification to a String creates a new string object. In contrast, StringBuilder is mutable, allowing for modifications without creating new objects, which makes it more efficient for scenarios involving many concatenations or alterations. Additionally, StringBuilder is not synchronized, which means it is not thread-safe, whereas StringBuffer is synchronized and can be used in multi-threaded environments."
+				},
+				{
+					"question": "How can you extract a substring from a given string in Java?",
+					"answer": "In Java, you can extract a substring from a string using the substring() method. There are two variations of this method:\n1. substring(int startIndex): This copies characters from the start index to the end of the string.\n2. substring(int startIndex, int endIndex): This copies characters from the start index to one character before the end index. For example:\n```java\nString str = \"Hello World\";\nString subStr1 = str.substring(6); // Outputs \"World\"\nString subStr2 = str.substring(0, 5); // Outputs \"Hello\"\n```"
+				},
+				{
+					"question": "What does the method indexOf(char) do in a String?",
+					"answer": "The indexOf(char ch) method in a Java String returns the index of the first occurrence of the specified character within the string. If the character is not found, it returns -1. For example:\n```java\nString str = \"Hello\";\nint index = str.indexOf('e'); // Outputs: 1\nint notFoundIndex = str.indexOf('x'); // Outputs: -1\n``` This method is useful for searching specific characters within a string."
+				},
+				{
+					"question": "Explain how String.split(String regex) works in Java.",
+					"answer": "In Java, the split() method of the String class is used to divide a string into substrings based on a specified regular expression (regex). The method returns an array of strings that are split based on matches of the regex. For example:\n```java\nString fruits = \"apple,orange,banana\";\nString[] fruitArray = fruits.split(\",\");\n// fruitArray[0] = \"apple\"\n// fruitArray[1] = \"orange\"\n// fruitArray[2] = \"banana\"\n``` This is commonly used to parse delimited data."
+				},
+				{
+					"question": "Describe how to convert an integer to a String in Java.",
+					"answer": "Java offers several ways to convert an integer to a String. The primary methods include:\n1. Using Integer.toString(int):\n   ```java\n   int n = 123;\n   String s = Integer.toString(n);\n   ```\n2. Using String.valueOf(int):\n   ```java\n   String s = String.valueOf(n);\n   ```\n3. Concatenation with an empty string:\n   ```java\n   String s = n + \"\";\n   ```\nAll these methods effectively convert the integer to its string representation."
+				}
+			],
+			"conclusion": "In conclusion, understanding how to manipulate strings in Java is essential for effective programming. The String class offers several methods for creating, comparing, extracting, and modifying strings. Additionally, StringBuffer and StringBuilder provide enhanced features for mutable sequences of characters. For further exploration, consider learning about regex for string pattern matching and more advanced string manipulations in Java.",
+			"videos": [
+				{
+					"title": "Working With Strings - Java - Tutorial 7",
+					"link": "https://www.youtube.com/watch?v=yebwyol5M7k",
+					"imageUrl": "https://i.ytimg.com/vi/yebwyol5M7k/mqdefault.jpg?sqp=-oaymwEFCJQBEFM&rs=AMzJL3nzP7Bp76QSw5mSuYQqNmyeV2vPOQ",
+					"duration": "17:23",
+					"source": "YouTube",
+					"date": "Oct 22, 2017"
+				},
+				{
+					"title": "Java Tutorial - 07 - Creating and Using Strings in Java",
+					"link": "https://www.youtube.com/watch?v=r3DBIDyzLUI",
+					"imageUrl": "https://i.ytimg.com/vi/r3DBIDyzLUI/mqdefault.jpg?sqp=-oaymwEFCJQBEFM&rs=AMzJL3n5cEbfXMZeFXQt82qPGhG10tPgmw",
+					"duration": "11:39",
+					"source": "YouTube",
+					"date": "Feb 4, 2014"
+				},
+				{
+					"title": "#34 What is String in Java",
+					"link": "https://www.youtube.com/watch?v=cV-sOpOgof8",
+					"imageUrl": "https://i.ytimg.com/vi/cV-sOpOgof8/mqdefault.jpg?sqp=-oaymwEFCJQBEFM&rs=AMzJL3msCERp2ZOc2-XIVWB1BD054x8I-A",
+					"duration": "7:24",
+					"source": "YouTube",
+					"date": "Jan 18, 2023"
+				},
+				{
+					"title": "Java Strings Tutorial",
+					"link": "https://www.youtube.com/watch?v=yMkFYxrDL2M",
+					"imageUrl": "https://i.ytimg.com/vi/yMkFYxrDL2M/mqdefault.jpg?sqp=-oaymwEFCJQBEFM&rs=AMzJL3n9DjaxYF2WG9mb49MxVTrKsoLtsA",
+					"duration": "9:04",
+					"source": "YouTube",
+					"date": "Dec 5, 2020"
+				}
+			]
+		}
+	},
+	{
+		"id": 3,
+		"title": "Java String",
+		"topic": "All",
+		"knowledgeLevel": "Medium",
+		"note": {
+			"introduction_and_motivation": "Strings are fundamental components of programming in Java, as they allow developers to handle textual data efficiently. Understanding how to use and manipulate strings is crucial for any Java programmer, whether for user input, data storage, or string processing. This note aims to delve into the various classes, methods, and functionalities associated with strings in Java, helping you become proficient in handling string operations.",
+			"slides": [
+				{
+					"slide_name": "String Basics",
+					"slide_content": "In Java, the String class is used to store and manipulate sequences of characters. A string can be created in two primary ways:\n1. Using the String constructor:\n   String message = new String(\"Welcome\");`\n2. Directly using string literals:\n   String message = \"Welcome\";\n\nStrings are immutable, meaning once created, they cannot be modified. If manipulation is needed, new strings are created."
+				},
+				{
+					"slide_name": "String Constructors",
+					"slide_content": "The String class offers various constructors to create string instances:\n- String s = new String(); // creates an empty string\n- String s2 = new String(s); // creates a string using another string s`\n- String s3 = new String(charArray);` // creates a string from a character array\n- You can also create strings from byte arrays that represent encoded characters. Examples include:\n```java\nchar charArray[] = { 'b', 'i', 'r', 't', 'h', ' ', 'd', 'a', 'y' };  \nString s3 = new String(charArray); // birth day\n```"
+				},
+				{
+					"slide_name": "String Length & Extraction",
+					"slide_content": "The length() method is used to find the length of a string:\n```java\nString s1 = \"Hello\";\nSystem.out.println(s1.length()); // Outputs: 5\n```\n\nYou can extract specific characters using the charAt(index) method:\n```java\nSystem.out.println(s1.charAt(1)); // Outputs: e\n```\n\nTo extract a range of characters, the getChars() method can be used to populate a character array with characters from the string."
+				},
+				{
+					"slide_name": "String Comparisons",
+					"slide_content": "Java provides several methods to compare strings:\n- equals() method returns true if the strings are equal:\n  ```java\n  s1.equals(\"Hello\"); // true\n  ```\n- equalsIgnoreCase() ignores case differences:\n  ```java\n  s1.equalsIgnoreCase(s2);\n  ```\n- compareTo() compares two strings lexicographically:\n  ```java\n  int result = s1.compareTo(s2);\n  ```\n\nPlease note that using == checks for reference equality instead, which may lead to unexpected results."
+				},
+				{
+					"slide_name": "String Manipulation Methods",
+					"slide_content": "Java strings provide various manipulation methods such as:\n- Concatenation using concat() or the + operator:\n  ```java\n  String s1 = \"Happy \";\n  String s2 = \"Birthday\";\n  String s3 = s1.concat(s2);\n  ```\n- Searching with indexOf(char) and lastIndexOf(char) methods to find positions of characters.\n- The split() method to divide a string based on a regex:\n  ```java\n  String test = \"abc,def,123\";\n  String[] out = test.split(\",\");\n  ```\n\nAdditionally, conversion methods like toUpperCase(), toLowerCase(), and trim() let you manipulate the content of strings effectively."
+				},
+				{
+					"slide_name": "StringBuffer and StringBuilder",
+					"slide_content": "Java provides the StringBuffer and StringBuilder classes for mutable sequences of characters:\n- *StringBuffer* is synchronized and thread-safe but slower.\n- *StringBuilder* is faster and not synchronized.\n\nBoth classes offer methods to append, insert, and modify strings:\n```java\nStringBuffer sb = new StringBuffer(\"hello\");\nsb.append(\" world\"); // hello world\nss.insert(5, ' '); // insert space\n```"
+				}
+			],
+			"questions": [
+				{
+					"question": "What is the difference between String and StringBuilder in Java?",
+					"answer": "The primary difference between String and StringBuilder in Java lies in mutability and performance. A String object is immutable, meaning that once it is created, it cannot be changed. Any modification to a String creates a new string object. In contrast, StringBuilder is mutable, allowing for modifications without creating new objects, which makes it more efficient for scenarios involving many concatenations or alterations. Additionally, StringBuilder is not synchronized, which means it is not thread-safe, whereas StringBuffer is synchronized and can be used in multi-threaded environments."
+				},
+				{
+					"question": "How can you extract a substring from a given string in Java?",
+					"answer": "In Java, you can extract a substring from a string using the substring() method. There are two variations of this method:\n1. substring(int startIndex): This copies characters from the start index to the end of the string.\n2. substring(int startIndex, int endIndex): This copies characters from the start index to one character before the end index. For example:\n```java\nString str = \"Hello World\";\nString subStr1 = str.substring(6); // Outputs \"World\"\nString subStr2 = str.substring(0, 5); // Outputs \"Hello\"\n```"
+				},
+				{
+					"question": "What does the method indexOf(char) do in a String?",
+					"answer": "The indexOf(char ch) method in a Java String returns the index of the first occurrence of the specified character within the string. If the character is not found, it returns -1. For example:\n```java\nString str = \"Hello\";\nint index = str.indexOf('e'); // Outputs: 1\nint notFoundIndex = str.indexOf('x'); // Outputs: -1\n``` This method is useful for searching specific characters within a string."
+				},
+				{
+					"question": "Explain how String.split(String regex) works in Java.",
+					"answer": "In Java, the split() method of the String class is used to divide a string into substrings based on a specified regular expression (regex). The method returns an array of strings that are split based on matches of the regex. For example:\n```java\nString fruits = \"apple,orange,banana\";\nString[] fruitArray = fruits.split(\",\");\n// fruitArray[0] = \"apple\"\n// fruitArray[1] = \"orange\"\n// fruitArray[2] = \"banana\"\n``` This is commonly used to parse delimited data."
+				},
+				{
+					"question": "Describe how to convert an integer to a String in Java.",
+					"answer": "Java offers several ways to convert an integer to a String. The primary methods include:\n1. Using Integer.toString(int):\n   ```java\n   int n = 123;\n   String s = Integer.toString(n);\n   ```\n2. Using String.valueOf(int):\n   ```java\n   String s = String.valueOf(n);\n   ```\n3. Concatenation with an empty string:\n   ```java\n   String s = n + \"\";\n   ```\nAll these methods effectively convert the integer to its string representation."
+				}
+			],
+			"conclusion": "In conclusion, understanding how to manipulate strings in Java is essential for effective programming. The String class offers several methods for creating, comparing, extracting, and modifying strings. Additionally, StringBuffer and StringBuilder provide enhanced features for mutable sequences of characters. For further exploration, consider learning about regex for string pattern matching and more advanced string manipulations in Java.",
+			"videos": [
+				{
+					"title": "Working With Strings - Java - Tutorial 7",
+					"link": "https://www.youtube.com/watch?v=yebwyol5M7k",
+					"imageUrl": "https://i.ytimg.com/vi/yebwyol5M7k/mqdefault.jpg?sqp=-oaymwEFCJQBEFM&rs=AMzJL3nzP7Bp76QSw5mSuYQqNmyeV2vPOQ",
+					"duration": "17:23",
+					"source": "YouTube",
+					"date": "Oct 22, 2017"
+				},
+				{
+					"title": "Java Tutorial - 07 - Creating and Using Strings in Java",
+					"link": "https://www.youtube.com/watch?v=r3DBIDyzLUI",
+					"imageUrl": "https://i.ytimg.com/vi/r3DBIDyzLUI/mqdefault.jpg?sqp=-oaymwEFCJQBEFM&rs=AMzJL3n5cEbfXMZeFXQt82qPGhG10tPgmw",
+					"duration": "11:39",
+					"source": "YouTube",
+					"date": "Feb 4, 2014"
+				},
+				{
+					"title": "#34 What is String in Java",
+					"link": "https://www.youtube.com/watch?v=cV-sOpOgof8",
+					"imageUrl": "https://i.ytimg.com/vi/cV-sOpOgof8/mqdefault.jpg?sqp=-oaymwEFCJQBEFM&rs=AMzJL3msCERp2ZOc2-XIVWB1BD054x8I-A",
+					"duration": "7:24",
+					"source": "YouTube",
+					"date": "Jan 18, 2023"
+				},
+				{
+					"title": "Java Strings Tutorial",
+					"link": "https://www.youtube.com/watch?v=yMkFYxrDL2M",
+					"imageUrl": "https://i.ytimg.com/vi/yMkFYxrDL2M/mqdefault.jpg?sqp=-oaymwEFCJQBEFM&rs=AMzJL3n9DjaxYF2WG9mb49MxVTrKsoLtsA",
+					"duration": "9:04",
+					"source": "YouTube",
+					"date": "Dec 5, 2020"
+				}
+			]
+		}
+	}
+]
